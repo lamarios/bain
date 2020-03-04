@@ -42,7 +42,7 @@ create_and_set $file $last_changed
 
 while true
 do
-	current=`< /sys/class/power_supply/BAT0/capacity`
+	current=`< $battery_path/capacity`
 
 	if [[ "$last_changed" != "$current" ]]
 	then
